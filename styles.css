@@ -64,7 +64,7 @@ h1 {
 }
 
 .creator-content h3 {
-    color: #0740aa;
+    color: #ffc107;
     margin-bottom: 10px;
     font-size: 1.2em;
     font-weight: 600;
@@ -252,7 +252,7 @@ h1 {
     font-size: 0.95em;
     font-family: monospace;
     background-color: #ffffff;
-    color: #f7f7f7;
+    color: #ffffff;
     resize: vertical;
     margin-bottom: 12px;
 }
@@ -260,7 +260,7 @@ h1 {
 .load-transcript-section textarea:focus {
     outline: none;
     border-color: #ffd700;
-    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.18);
+    box-shadow: 0 0 0 3px rgba(0, 255, 247, 0.18);
 }
 
 .load-transcript-btn {
