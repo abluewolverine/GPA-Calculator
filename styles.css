@@ -39,7 +39,7 @@ h1 {
 }
 
 .creator-panel {
-    background: linear-gradient(135deg, #f22450, #0f2245 100%);
+    background: #0f2245;
     border-radius: 8px;
     padding: 20px;
     text-align: center;
