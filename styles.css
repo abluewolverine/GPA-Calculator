@@ -190,9 +190,9 @@ h1 {
 .transcript-section {
     margin-top: 20px;
     padding: 22px;
-    background-color: #e8f0ff;
+    background-color: #ffffff;
     border-radius: 12px;
-    border: 1px solid #ebf1ff;
+    border: 1px solid #ffffff;
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -259,13 +259,13 @@ h1 {
 
 .load-transcript-section textarea:focus {
     outline: none;
-    border-color: #ffd700;
-    box-shadow: 0 0 0 3px rgba(0, 255, 247, 0.18);
+    border-color: #16315a;
+    box-shadow: 0 0 0 3px rgba(49, 49, 49, 0.18);
 }
 
 .load-transcript-btn {
     background-color: #16315a;
-    color: white;
+    color: #ffffff;
     padding: 12px 24px;
     border-radius: 6px;
     font-weight: 700;
