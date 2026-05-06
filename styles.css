@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 30px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 280px;
+}
+
+.container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.creator-panel {
+    background: linear-gradient(135deg, #f22450, #0f2245 100%);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #1e3c72;
+    width: 100%;
+    height: fit-content;
+}
+
+.creator-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.creator-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #1e3c72;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.creator-content h3 {
+    color: #1e3c72;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.creator-message {
+    color: #333;
+    font-size: 0.9em;
+    line-height: 1.5;
+    text-align: center;
+    font-style: italic;
+}
+
+.calculator-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-section {
+    margin-bottom: 30px;
+}
+
+#addRowBtn,
+#saveTotalBtn {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.grades-table thead {
+    background-color: #1e3c72;
+    color: white;
+}
+
+.grades-table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #1e3c72;
+}
+
+.grades-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.grades-table input,
+.grades-table select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.grades-table input:focus,
+.grades-table select:focus {
+    outline: none;
+    border-color: #1e3c72;
+    box-shadow: 0 0 0 3px rgba(30, 60, 114, 0.1);
+}
+
+.grade-row:hover {
+    background-color: #f5f5f5;
+}
+
+.remove-btn {
+    background-color: #1e3c72;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.remove-btn:hover {
+    background-color: #0f1f3c;
+}
+
+.add-row-btn {
+    background-color: #ffc107;
+    color: #1e3c72;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.add-row-btn:hover {
+    background-color: #ffb300;
+}
+
+.save-total-btn {
+    background-color: #1e3c72;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.save-total-btn:hover {
+    background-color: #0f1f3c;
+}
+
+.transcript-section {
+    margin-top: 20px;
+    padding: 22px;
+    background-color: #0f2245;
+    border-radius: 12px;
+    border: 1px solid #2c4478;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.save-transcript-btn,
+.save-total-btn,
+.add-row-btn,
+.load-transcript-btn {
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.save-transcript-btn,
+.add-row-btn {
+    background-color: #ffd700;
+    color: #0a1f45;
+    padding: 12px 24px;
+    margin-bottom: 15px;
+}
+
+.save-transcript-btn:hover,
+.add-row-btn:hover {
+    background-color: #ffe34d;
+    transform: translateY(-1px);
+}
+
+.save-total-btn,
+.load-transcript-btn {
+    background-color: #1e3c72;
+    color: white;
+    padding: 12px 24px;
+}
+
+.save-total-btn:hover,
+.load-transcript-btn:hover {
+    background-color: #16315a;
+    transform: translateY(-1px);
+}
+
+.load-transcript-section h3 {
+    color: #ffd700;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.load-transcript-section textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #2c4478;
+    border-radius: 8px;
+    font-size: 0.95em;
+    font-family: monospace;
+    background-color: #0d1b3d;
+    color: #f7f7f7;
+    resize: vertical;
+    margin-bottom: 12px;
+}
+
+.load-transcript-section textarea:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.18);
+}
+
+.load-transcript-btn {
+    background-color: #1e3c72;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.load-transcript-btn:hover {
+    background-color: #16315a;
+}
+
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.results-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.semesters-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.semesters-section h2 {
+    color: #1e3c72;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.semesters-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.semesters-table thead {
+    background-color: #1e3c72;
+    color: white;
+}
+
+.semesters-table th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #1e3c72;
+}
+
+.semesters-table td {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.semesters-table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+.result-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #1e3c72;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.result-box.gpa-box {
+    grid-column: 1 / -1;
+    background-color: #fffbf0;
+    border-left-color: #ffc107;
+}
+
+.result-box label {
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.result-value {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.result-box.gpa-box .result-value {
+    font-size: 2.5em;
+    color: #ffc107;
+}
+
+.overall-gpa-box {
+    background-color: #fffbf0;
+    border-left: 4px solid #ffc107;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.overall-gpa-box label {
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.overall-gpa {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffc107;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .creator-panel {
+        width: 100%;
+        order: -1;
+        padding: 15px;
+    }
+
+    .creator-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .creator-content h3 {
+        font-size: 1em;
+    }
+
+    .creator-message {
+        font-size: 0.8em;
+    }
+
+    .grades-table th,
+    .grades-table td {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .results-section {
+        grid-template-columns: 1fr;
+    }
+
+    .result-box.gpa-box {
+        grid-column: 1;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #addRowBtn,
+    #saveTotalBtn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .save-total-btn {
+        width: 100%;
+    }
+
+    .transcript-section {
+        margin-top: 15px;
+    }
+
+    .save-transcript-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .load-transcript-section textarea {
+        font-size: 0.8em;
+    }
+
+    .load-transcript-btn {
+        width: 100%;
+    }
+}

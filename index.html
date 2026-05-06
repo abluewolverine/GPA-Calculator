@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michigan GPA Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="transcript-section">
+            <button id="saveTranscriptBtn" class="save-transcript-btn">Save Transcript</button>
+            
+            <div class="load-transcript-section">
+                <h3>Load Previous Transcript</h3>
+                <textarea id="transcriptInput" placeholder="Paste your saved transcript here..." rows="6"></textarea>
+                <button id="loadTranscriptBtn" class="load-transcript-btn">Load Transcript</button>
+            </div>
+        </div>
+
+        <div class="creator-panel">
+            <div class="creator-content">
+                <img src="https://via.placeholder.com/150x150/1e3c72/ffffff?text=Creator" alt="Creator Photo" class="creator-image">
+                <h3>Algorithm Creator</h3>
+                <p class="creator-message">
+                    "This GPA calculator uses the MHP/MSH formula to provide accurate grade point averages. 
+                    The algorithm was designed to handle complex grading systems and semester tracking 
+                    for comprehensive academic performance analysis."
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>GPA Calculator</h1>
+        
+        <div class="calculator-section">
+            <div class="input-section">
+                <table class="grades-table">
+                    <thead>
+                        <tr>
+                            <th>Class Name</th>
+                            <th>Credit Hours</th>
+                            <th>Letter Grade</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="gradesBody">
+                        <tr class="grade-row">
+                            <td><input type="text" class="class-name" placeholder="e.g., Math 101"></td>
+                            <td><input type="number" class="credit-hours" min="0" step="0.5" placeholder="Credits"></td>
+                            <td>
+                                <select class="letter-grade">
+                                    <option value="">Select Grade</option>
+                                    <option value="A+">A+ / A</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B">B</option>
+                                    <option value="B-">B-</option>
+                                    <option value="C+">C+</option>
+                                    <option value="C">C</option>
+                                    <option value="C-">C-</option>
+                                    <option value="D+">D+</option>
+                                    <option value="D">D</option>
+                                    <option value="D-">D-</option>
+                                    <option value="E">E (F)</option>
+                                    <option value="W">W (Withdrawal)</option>
+                                </select>
+                            </td>
+                            <td><button class="remove-btn" style="display:none;">Remove</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <button id="addRowBtn" class="add-row-btn">Add Row</button>
+                <button id="saveTotalBtn" class="save-total-btn">Save Total</button>
+            </div>
+
+            <div class="main-content">
+                <div class="results-section">
+                    <div class="result-box">
+                        <label>Total Credit Hours (MSH):</label>
+                        <div class="result-value" id="mshValue">0</div>
+                    </div>
+                    
+                    <div class="result-box">
+                        <label>Total Grade Points (MHP):</label>
+                        <div class="result-value" id="mhpValue">0</div>
+                    </div>
+                    
+                    <div class="result-box gpa-box">
+                        <label>GPA (MHP / MSH):</label>
+                        <div class="result-value gpa" id="gpaValue">0.000</div>
+                    </div>
+                </div>
+
+                <div class="semesters-section">
+                    <h2>Semester History</h2>
+                    <table class="semesters-table" id="semestersTable">
+                        <thead>
+                            <tr>
+                                <th>Semester</th>
+                                <th>GPA</th>
+                            </tr>
+                        </thead>
+                        <tbody id="semestersBody">
+                        </tbody>
+                    </table>
+                    <div class="overall-gpa-box">
+                        <label>Overall Average GPA:</label>
+                        <div class="result-value overall-gpa" id="overallGPA">0.000</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
