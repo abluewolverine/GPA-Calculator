@@ -251,7 +251,7 @@ h1 {
     border-radius: 8px;
     font-size: 0.95em;
     font-family: monospace;
-    background-color: #bec2ca;
+    background-color: #ffffff;
     color: #f7f7f7;
     resize: vertical;
     margin-bottom: 12px;
@@ -264,7 +264,7 @@ h1 {
 }
 
 .load-transcript-btn {
-    background-color: #1e3c72;
+    background-color: #ffffff;
     color: white;
     padding: 12px 24px;
     border-radius: 6px;
